@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuquiago marka - Kjarkas</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Altura mínima para que ocupe toda la ventana */
+            background-image: url('fondo 1.jpg'); /* Tu imagen de fondo */
+            background-size: cover; /* Ajusta la imagen para que ocupe toda la pantalla */
+            background-repeat: no-repeat; /* Evita que se repita */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Hace que el fondo sea fijo */
+            background-color: #755721; /* Color de respaldo */
+        }
+
+        header {
+            background-image: url(titulo\ 2.jpg);
+            background-size: cover;
+            
+            background-color: #622512;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            position: relative;
+            z-index: 10; /* Asegura que esté sobre el fondo */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            width: 100%;
+            color: #ecd380;
+            
+        }
+        header u {
+            color: #ecd380;
+        }
+
+        h2 {
+            font-size: 2em;
+            background-image: url(titulo\ 1.jpg);
+            background-size: left;
+            width: 33%;
+        }
+
+        .navbar {
+            background-color: #84774c;
+            padding: 10px;
+            position: relative;
+            z-index: 10; /* Asegura que esté sobre el fondo */
+
+            align-items: center;
+            display: grid;
+            grid-template-columns: 10fr auto;
+        }
+        /* Media Query para pantallas pequeñas */
+        @media (max-width: 600px) {
+        .navbar {
+        grid-template-columns: 1fr; /* Una sola columna */
+        }
+
+        .right-buttons {
+        justify-self: start; /* Alinea a la izquierda */
+        margin-top: 10px; /* Espaciado entre grupos */
+        }
+        }
+
+        nav button {
+            background-color: #543b03;
+            color: white;
+            border: none;
+            padding: 1.5% 2%;
+            margin: 0 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            padding: 5px;
+        }
+
+        nav button:hover {
+            background-color: #5b0d0d;
+        }
+
+        section {
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 1400px;
+            background-color: #543a03ca;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: auto;
+            color: white;
+        }
+        .calculadora1 {
+            padding: 15px;
+            margin: 30px auto;
+            max-width: 1400px;
+            background: radial-gradient(circle, #5b0d0da8 1%, #543a03 100%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            overflow: auto;
+            color: white;
+        }
+
+        section h2 {
+            color: #ffe28b;
+        }
+
+        iframe {
+            width: 70em;
+            height: 50em;
+            margin-bottom: 10px;
+            border: none;
+        }
+
+        .back-to-nav {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            background-color: #5b0d0d;
+            
+        }
+
+        .back-to-nav a {
+            color: #ffe28b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-to-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .table-container {
+            width:100%;
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente si hay espacio */
+            
+        }
+        @media(max-width:600px){
+            .table-container{
+                width: 250%;
+            }
+        }
+
+        textarea {
+            width: 550px; /* Ancho fijo */
+            height: 445px; /* Alto fijo */
+            resize: none; /* Evita que el usuario cambie el tamaño */
+            margin-left: 50px; /* Espaciado del lado derecho */
+            margin-right: 10;
+            font-size: 1.5em;
+            padding: 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            color: rgb(32, 32, 32); /* Texto en negro */
+            background-color: #f6f6d1e0; 
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        
+        .colortext{
+            color: black;
+        }
+        .footer {
+            background-color: #622512d7;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+            gap: 150px;
+        }
+        .footer a {
+            margin: 10px; /* Resetea márgenes predeterminados */
+        }
+        .h1titulo {
+            font-size: 2em;
+        }
+        .googlesheets {
+            width: 40em;
+            height: 22.4em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <u><h1>Chuquiago Marka - Kjarkas</h1></u>
+    </header>
+    
+    <nav class="navbar">
+        <div class="left-buttons">
+            
+            <button onclick="location.href='#seccion1'">Tema Musical</button>
+            <button onclick="location.href='#seccion2'">Historia</button>
+            <button onclick="location.href='#seccion3'">Informacion</button>
+            <button onclick="location.href='#seccion4'">Carrusel</button>
+            <button onclick="location.href='http://127.0.0.1:5500/PROYECTO%20FINAL/index.html#seccion3'">
+                Volver a la página
+            </button>
+
+        </div>
+        <div class="right-buttons">
+            <a href="https://www.facebook.com/share/15rfLd4Qsu/" target="_blank"><img src="facebook 2.png" width="20em" height="20em"></img></a>
+            <a href="https://www.tiktok.com/@weymarmendoza" target="_blank"><img src="tiktok 2.png" width="20em" height="20em"></img></img></a>
+            <a href="https://www.youtube.com/@weymarmendoza5648" target="_blank"><img src="Youtube 1.png" width="22em" height="22em"></img></img></a>
+        </div>
+    </nav>
+    <section id="seccion1">
+        <center><h1 class="h1titulo">Tema Musical</h1></center>
+        <center>
+            <iframe 
+            src="https://www.youtube.com/embed/Pfj-HduRm2w?si=4kdHOmSHzuCpQkv4" 
+            title="Canción" 
+            frameborder="0" 
+            llow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+            </iframe>
+        </center>
+        <br>
+        <div class="back-to-nav">
+            <a href="#"> Volver al menu</a>
+        </div>
+    </section>
+
+
+    <section id="seccion2">
+        <center>
+        <table>
+            <tr>
+                <td>
+                <center>
+                    <h1>Contexto y origen de Llorando se fue - Kjarkas</h1>
+                </center>
+                    <textarea>
+    La canción fue escrita en los años 80, en un momento en que Bolivia vivía transformaciones sociales, políticas y culturales significativas. Gonzalo Hermosa, inspirado por la diversidad y los contrastes de La Paz, quiso plasmar en esta obra un homenaje a la ciudad que simboliza la resistencia, la riqueza cultural y las luchas de su pueblo.
+
+    Chuquiago Marka retrata tanto la belleza como las desigualdades de La Paz, una urbe marcada por sus paisajes majestuosos, como el Illimani, y por la vida cotidiana de sus habitantes, desde los barrios más humildes hasta las zonas más acomodadas. La canción combina la melancolía con el orgullo, evocando imágenes de la vida paceña, sus tradiciones y sus desafíos.        </textarea>
+                </td>
+                <td>
+                    <center>
+                        <h1>Letra y significado</h1>
+                    </center>
+                    <textarea>
+    La letra está cargada de simbolismo, destacando el carácter multicultural de La Paz. Hace alusión a las raíces indígenas, la historia colonial y la modernidad que se entrelazan en la ciudad. Los versos evocan emociones fuertes, como el amor por la tierra natal y el anhelo de superar las adversidades.
+
+    Ejemplo de fragmento destacado: "Chuquiago Marka, valle de mis amores,
+    llorando por tus calles se va mi corazón".
+    
+    Este tipo de expresiones conecta profundamente con los paceños y bolivianos en general, quienes encuentran en la canción un reflejo de su identidad y sus vivencias      </textarea>          
+            </td>
+            </tr>
+        </table>
+        </center>
+        
+        
+
+
+        <div class="back-to-nav">
+            <a href="#"> Volver al menu</a>
+        </div>
+    </section>
+    
+    <section id="seccion3">
+        <center>
+            <h1>INFORMACION</h1>
+        </center>
+        <center>
+            <iframe class="googlesheets"
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6nn7kiFpbiuO_nYd7r4pV-wqfrEUc123s9yz4696i9YfCr4y0cHPEdrFCTHPfDyCJP6E9ow2d-cUb/pubhtml?gid=0&range=C1:D14&single=true" 
+            style="border: none;">
+        </iframe>
+        </center>
+
+        <div class="back-to-nav">
+            <a href="#"> Volver al menu</a>
+        </div>
+    </section>
+
+
+
+    <section id="seccion4">
+        
+        <marquee><img src="chuquiago 1.jpg" width="500" height="500"><img src="chuquiago 2.jpg" width="500" height="500"><img src="chuquiago 3.jpg" width="500" height="500"><img src="chuquiago 4.jpg" width="500" height="500"></marquee>
+        <div class="back-to-nav">
+            <a href="#"> Volver al menu</a>
+        </div>
+    </section>
+
+</body>
+    <footer class="footer">
+        
+        <a href="https://www.facebook.com/share/15rfLd4Qsu/" target="_blank"><img src="facebook 2.png" width="20em" height="20em"></img></a>
+        <a href="https://www.tiktok.com/@weymarmendoza" target="_blank"><img src="tiktok 2.png" width="20em" height="20em"></img></img></a>
+        <a href="https://www.youtube.com/@weymarmendoza5648" target="_blank"><img src="Youtube 1.png" width="22em" height="22em"></img></img></a>
+            <p>
+                © Weymar - todos los derechos reservados
+            </p>
+    </footer>
+</html>
